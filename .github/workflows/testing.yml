@@ -25,3 +25,4 @@ jobs:
       - name: Let's see if it works
         env:
           TEST_OUTPUT: ${{ contains(join(github.event.commits.*.message, " "), "#skip")}}
+        run: echo "$TEST_OUTPUT"
